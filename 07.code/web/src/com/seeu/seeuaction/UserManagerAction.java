@@ -1,5 +1,7 @@
 package com.seeu.seeuaction;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.UUID;
 
@@ -7,18 +9,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.seeu.db.DBFactory;
+import com.seeu.db.DBManager;
 import com.seeu.db.DataBase;
 import com.seeu.serverlet.IWebApiService;
+import com.seeu.utils.DBUtil;
 /**
  * 用户注册Action
  * */
-public class UserRegestAction implements IWebApiService{
-	private static Logger logger = Logger.getLogger(UserRegestAction.class);
-	@Override
-	public String execute(HttpServletRequest request,
+public class UserManagerAction {
+	private static Logger logger = Logger.getLogger(UserManagerAction.class);
+	
+	public String registerAction(HttpServletRequest request,
 			HttpServletResponse response) {
 		String verifCode  = request.getParameter("verifCode");
 		String sessionVCode = (String) request
@@ -57,12 +62,42 @@ public class UserRegestAction implements IWebApiService{
 			logger.info("newUsersql=[" + newSite + "]");
 			String[] sqls = new String[]{newUser,newSite};
 			db.executeUpdate(sqls);
+			db.closeDB();
 		}catch(Exception e){
 			logger.error(e.getMessage(), e);
 		}
 		
 		
 		return "{\"status\":1}";
+	}
+	
+	/**
+	 * 登录方法
+	 * */
+	public String loginAction (HttpServletRequest request,
+			HttpServletResponse response){
+		String verifCode  = request.getParameter("verifCode");
+		String password = request.getParameter("password");
+		String userName = request.getParameter("userName");
+		try{
+			Connection con = DBManager.getConnection();
+			String loginSQL = "SELECT u.id,u.loginaccount,u.nikename," 
+					+ "u.pc_image,real_name,org.org_name AS orgname FROM " 
+					+ "zmj_user AS u LEFT JOIN zmj_org org on u.orgid=org.id"
+					+ " where u.loginaccount=? AND loginpassword=?";
+			PreparedStatement pst = con.prepareStatement(loginSQL);
+			pst.setString(1, userName);
+			pst.setString(2, password);
+			ResultSet rest = pst.executeQuery();
+			JSONArray result = DBUtil.resultSetToJSON(rest);
+			if(result.length() == 1){
+				return "{\"status\":1,\"DATA\":" + result.toString() + "}";
+			}
+			
+		}catch(Exception e){
+			return "{\"status\":0,\"msg\":\"登录失败\"}";
+		}
+		return null;
 	}
 	/**
 	 * 校验用户名是否重复

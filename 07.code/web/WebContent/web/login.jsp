@@ -22,16 +22,16 @@
 <div class="container">
   
   <div class="login-form">  
-      <form action="#" method="get">
+      <form id="loginForm">
         <div class="form-header"><h1>用户登录</h1></div>
         <div class="form-body">
             <div class="form-group">
               <label for="inputUser">用户名</label>
-              <input type="text" class="form-control" id="inputUser" placeholder="请输入用户名/电话">
+              <input type="text" class="form-control" id="inputUser" name="inputUser" placeholder="请输入用户名/电话">
             </div>
             <div class="form-group">
               <label for="inputPwd">密码</label>
-              <input type="password" class="form-control" id="inputPwd" placeholder="请输入密码">
+              <input type="password" class="form-control" id="inputPwd" name="inputPwd" placeholder="请输入密码">
             </div>       
             <div class="checkbox">
               <label>
@@ -39,7 +39,7 @@
               </label>
               <span class="pull-right"><a href="reg.jsp" class="btn-link">免费注册</a></span>
             </div>
-            <button type="submit" class="btn btn-default">登录</button>
+            <button type="submit" id="loginSubmit" class="btn btn-default">登录</button>
         </div>
 	</form>
   </div>
@@ -53,7 +53,7 @@
               'jquery': 'jquery/jquery/1.11.1/jquery'
           }
       });
-      seajs.use("./js/plugins/common/bootstrap");
+      seajs.use(["./js/plugins/common/bootstrap","./js/plugins/login"]);
   </script>
 </body>
 </html>

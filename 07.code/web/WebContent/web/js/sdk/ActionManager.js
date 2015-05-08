@@ -7,12 +7,12 @@ define(function(require, exports, module)
     * @param passwd{string} 密码 md5加密过的密码
     * @param veriCode{string} 验证码
     */    
-    module.exports.login = function(username,passwd,veriCode,token)
+    module.exports.login = function(username,passwd,veriCode)
     {
         var tData = {
-            action:"ajax/user!login_nnl.action"
+            action:"login.do"
             ,userName:username
-            ,passWord:passwd
+            ,password:passwd
             ,veriCode:veriCode
         }
         return tData;
@@ -28,7 +28,7 @@ define(function(require, exports, module)
     module.exports.register = function(userName,passWord,repassWord,veriCode,siteName)
     {
         var tData = {
-            action:"com.seeu.seeuaction.UserRegestAction.do"
+            action:"register.do"
             ,userName:userName
             ,password:passWord
             ,rePassword:repassWord
