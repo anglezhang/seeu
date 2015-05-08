@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css"  href="./lib/croppic/croppic.css">
+		<title>上传图片</title>
+	</head>
+	<body>
+		<h1>上传图片</h1><br>
+		<div id="uploadDiv" style="position: static; width:600px;height:600px;"></div>
+		<div id="cropContainerEyecandy" 
+         style="position: static; width:200px;height:200px;background:#e2e2e2;"></div>
+		<input type="text" id="myOutputId" value="" />
+		<script src="lib/sea/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+                base: './lib/'
+                , alias: {
+                    'jquery': 'jquery/jquery/1.11.1/jquery'
+                }
+            });
+			seajs.use("./js/plugins/corppic");
+		</script>
+	</body>
+</html>

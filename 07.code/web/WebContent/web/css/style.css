@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+aside{ padding-top:15px}
+aside,.grid-r{ box-shadow:0 0 4px 1px #ccc; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; background:#fff}
+.ht{color:#222; border-bottom:1px solid #ccc;padding:5px 0 10px 20px}
+.sidebar dl.sidebar-list{ border-radius:0; border-bottom:1px solid #ccc; box-shadow:none; padding:0 24px 10px 24px}
+.sidebar dl.sidebar-list dt{line-height:34px; color:#7c7c7c}
+.sidebar dl.sidebar-list dd{margin-left:30px; line-height:34px}
+.sidebar dl:last-child{border-bottom:0}
+.sidebar dl.sidebar-list dt i{ display:block; width:20px; height:16px; background-position:center; background-repeat:no-repeat; float:left; margin:9px 3px 0 0}
+.function-ico{background:url(../images/function-ico.png)}
+.admin-ico{background:url(../images/admin-ico.png)}
+.tj-ico{background:url(../images/tj-ico.png)}
+.share-ico{background:url(../images/share-ico.png)}
+.set-ico{background:url(../images/set-ico.png)}
+
+/*right*/
+.menu-bar {padding:0 10px}
+.menu-bar .item div,.menu-bar .item a{display:block;border-radius:5px; height:120px; margin-top:24px}
+.menu-bar .item h1{ margin-left:95px; text-align:center; padding-top:26px; font-size:42px}
+.menu-bar .item p{ margin-left:95px; text-align:center}
+.release{ background-color:#22ac38; display:block; line-height:120px; text-align:center; font-size:30px; color:#fff; transition:all linear 0.5s}
+.release:hover{ color:#fff; background-color:#0d631b; text-decoration:none;box-shadow:1px 1px 1px 1px #003c0a inset;}
+.activity{ background:url(../images/joypad.png) no-repeat 10px 10px #ffc39f}
+.activity h1{ color:#c66224}
+.members{ background:url(../images/man.png) no-repeat 10px 10px #fbd5d0 }
+.members h1{color:#bd402f}
+/*消息*/
+.ul-list li{ margin:0 20px; line-height:40px}
+.ul-list li span{color:#7c7c7c;}
+
+/*活动列表*/
+/*发布活动*/
+.u-add{ position:absolute; right:20px; top:20px}
+.btn-add{ width:130px; height:36px; line-height:36px; background-color:#22ac38;}
+.btn-preview{width:130px; height:36px; line-height:36px; background-color:#22ac38;}
+.tabs{ margin:20px 0}
+.tabs li{ margin-left:20px}
+.active-list .item{font-size:14px; float:left; width:260px; margin-left:24px; margin-bottom:20px; background-color:#f8f8f8; border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0}
+.active-list img{ border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0}
+.active-list h4{ margin-left:15px;margin-right:10px}
+.active-list .item p{ margin:10px 0 0 0; padding-left:30px}
+.active-list .item .u-box{ padding-left:0}
+.u-box a{ float:left; display:block; width:33.3333%; text-align:center;  font-size:12px; padding:10px 0; color:#fff}
+.list-ln{background-color:#abd91f}
+.activity-ln{background-color:#47a6dc}
+.cancel-ln{background-color:#f37d0a}
+.u-box a:hover{ background-color:#999}
+.address{ background:url(../images/address-ico.png) no-repeat 0px -5px}
+.date{ background:url(../images/time-ico.png) no-repeat 10px 3px}
+
+/*发布活动*/
+.activity-body{ padding:20px 10px 5px 10px}
+.t-head{ font-size:16px; font-weight:bold; margin-bottom:20px; padding:10px 20px; background:#22ac38; width:150px; color:#fff; text-align:center}
+.form-group{ clear:both}
+.form-group label.title{ display:block}
+.form-group label.title em{color:#cd0000; font-style:normal; margin-left:5px}
+i.glyphicon{ margin-right:5px}
+.media-box .ad{ float:left; width:480px; height:284px; margin-right:20px}
+.media-box .media-body p{ margin-top:10px}
+.form-group input[type="text"],.form-group select{ height:42px}
+.form-group-date:after{ display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:"."}
+.form-group-date .form-group-item{ float:left; width:405px}
+.form-group-date .form-group-item .form-control {display: inline-block;vertical-align: middle}
+.form-group-date .form-group-item .input-date{ width:200px}
+.form-group-date .form-group-item .select-time{ width:200px}
+.form-group-date .form-group-item:last-child{margin-left:10px}
+.form-group .select-address{ width:160px; display:inline-block;vertical-align: middle}
+.form-group .input-place{ width:330px; display:inline-block;vertical-align: middle}
+.form-group .btn-template{ width:200px; display:inline-block;vertical-align: middle}
+.form-group .set-template{ margin-left:10px; font-size:14px}
+.form-group .radio-inline{ display:inline-block}
+.form-btn-group{ text-align:center; margin:20px 0}
+.form-btn-group .btn{ margin-right:15px}
+.con{ width:100%; max-height:400px}
+#container{height:300px}
+
+/*报名信息*/
+.sub-title{ border-bottom:1px solid #ccc; padding:10px 0 15px 10px}
+.sub-title em{color:#cd0000; font-style:normal; margin-left:10px}
+.form-template .form-group{ display:block; margin:10px 0; padding:5px 20px}
+.form-template .form-group label{ width:70px; color:#cd0000}
+.form-template .form-group span{ text-align:right; width:80px; display:inline-block}
+.form-template .form-group .form-control{ width:300px}
+/*支付方式*/
+.type-choose label{ background:#fafafa; border:1px solid #ddd; margin-right:20px; width:140px; padding:15px 0}
+.type-choose label.active{ border:1px solid #cd0000; box-shadow:none; position:relative}
+.type-choose label.active:before{content: "\e013";position:absolute; background:#cd0000;width:16px; height:16px; bottom:0px; right:0px; display: inline-block; font-family: 'Glyphicons Halflings'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color:#fff; font-size:8px; font-weight:normal}
+.type-choose > .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.type-choose > .btn:last-child:not(:first-child), 
+.type-choose > .dropdown-toggle:not(:first-child){ border-radius:0}
+
+/*报名名单*/
+.table-box table{ border:1px solid #ccc; font-size:14px}
+.table-box table th{ text-align:center}
+.table-box table td{ text-align:center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	 <!-- 进入struts前先进行编码处理 -->
+ 	<servlet>
+		<servlet-name>seeu</servlet-name>
+		<servlet-class>com.seeu.dispatcher.DispatcherServlet</servlet-class>
+	</servlet>
+	<context-param>
+      <param-name>log4jConfigLocation</param-name>
+      <param-value>classpath:log4j.properties</param-value>
+   </context-param>
+   <context-param>
+      <param-name>log4jRefreshInterval</param-name>
+      <param-value>6000</param-value>
+   </context-param>
+	<!--seeu Servlet -->
+	<servlet-mapping>
+		<servlet-name>seeu</servlet-name>
+		<url-pattern>/seeu/*</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+    	<welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

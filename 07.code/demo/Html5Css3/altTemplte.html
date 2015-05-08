@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模版使用</title>
+	</head>
+	<body>
+		<div id="templete">
+			{{each list as value i}}
+                <p>第{{i+1}}行 {{value.TITLE}}</p>
+                <h1>{{value.INF}}</h1>
+            {{/each}}
+		</div>
+		<div id="temSource"></div>
+		<script src="lib/sea/sea.js"></script>
+		<script type="text/javascript" >
+			seajs.config({
+                base: './lib/'
+                , alias: {
+                    'jquery': 'jquery/jquery/1.11.1/jquery'
+                    ,"template":"template/template"
+                }
+            });
+        	seajs.use("./js/plugins/altTemplte");
+		</script>
+	</body>
+</html>
