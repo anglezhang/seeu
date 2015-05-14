@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>周末见-活动编辑</title>
+<link rel="stylesheet" type="text/css" href="css/function.css" >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" >
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" >
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+	<!--[if lt IE 9]>
+      <script type="text/javascript" src="js/html5shiv.min.js"></script>
+      <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/laydate/laydate.js"></script>
+</head>
+<body class="pb60">
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container">   
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">周末见</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">   
+        <li><a href="#">登录</a></li>    
+        <li><a href="#">注册</a></li>    
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">一堆烂草 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">个人资料</a></li>
+            <li><a href="#">设置</a></li>
+            <li><a href="#">重置密码</a></li>
+            <li class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+     <div class="row">
+		<div class="col-xs-3 sidebar">
+        	<aside>
+            <dl class="sidebar-list">
+             <dt><i class="function-ico"></i>功能</dt>
+             <dd><a href="#" target="_self">短信群发</a></dd>
+             <dd><a href="#" target="_self">自动回复</a></dd>
+             <dd><a href="#" target="_self">购买保险</a></dd>
+             <dd><a href="#" target="_self">添加插件</a></dd>             
+            </dl>
+            <dl class="sidebar-list">
+             <dt><i class="admin-ico"></i>管理</dt>
+             <dd><a href="发布活动.html" target="_self">发布活动</a></dd>
+             <dd><a href="活动列表.html" target="_self">活动列表</a></dd>
+             <dd><a href="报名模板.html" target="_self">报名模板</a></dd>
+             <dd><a href="会员管理.html" target="_self">会员管理</a></dd>             
+            </dl>
+            <dl class="sidebar-list">
+             <dt><i class="share-ico"></i>推广</dt>
+             <dd><a href="#" target="_self">社会化分享</a></dd>
+             <dd><a href="#" target="_self">社交媒体</a></dd>
+             <dd><a href="#" target="_self">推广合作</a></dd>
+             <dd><a href="#" target="_self">邮件邀请</a></dd>             
+            </dl>
+            <dl class="sidebar-list">
+             <dt><i class="tj-ico"></i>统计</dt>
+             <dd><a href="报名统计.html" target="_self">报名统计</a></dd>
+             <dd><a href="活动统计.html" target="_self">活动统计</a></dd>             
+            </dl>
+            <dl class="sidebar-list">
+             <dt><i class="set-ico"></i>设置</dt>
+             <dd><a href="#" target="_self">个人资料</a></dd>
+             <dd><a href="#" target="_self">头像设置</a></dd>
+             <dd><a href="#" target="_self">密码重置</a></dd>         
+            </dl>
+            </aside>
+        </div>
+        <div class="col-xs-9 grid-r">
+        	<div class="row">
+                <div class="ht f-pr"><h3>活动管理</h3>
+                    <div class="u-add">
+                    <a href="发布活动.html" title="新增活动" target="_blank" class="ui-btn btn-add"><i class="glyphicon glyphicon-plus"></i>发布活动</a>
+                    <a href="活动内容页.html" title="预览活动" target="_blank" class="ui-btn btn-preview ml10">预览活动</a>
+                    </div>
+                </div>  
+                    <ul class="nav nav-tabs tabs" role="tablist">
+					  <li role="presentation"><a href="活动管理.html">活动首页</a></li>
+                      <li role="presentation" class="active"><a href="活动编辑.html">活动编辑</a></li>
+                      <li role="presentation"><a href="报名名单.html">报名名单</a></li>
+                      <li role="presentation"><a href="活动贵广.html">活动推广</a></li>
+                      <li role="presentation"><a href="统计分析.html">统计分析</a></li>
+                    </ul>
+            </div>
+                <section>
+                <div class="activity-body">
+                  <div class="t-head">基本信息</div>
+                	<form action="#" method="get" target="_self">
+                    <div class="form-group">
+                    	<label class="title">海报</label>
+                        <div class="media-box clearfix">
+                        	<img src="images/pic.jpg" alt="海报" class="ad" />
+                            <div class="media-body">
+                            	<div class="btn-box"><button class="btn btn-primary btn-lg "><i class="glyphicon glyphicon-arrow-up"></i>上传</button></div>
+                                <p>图片小于500k (jpg、gif、png、bmp)推荐尺寸 <mark>1080*640</mark> px，最小尺寸 <mark>480*284</mark> px！</p>                                
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                    	<label for="inputTitle" class="title">标题<em>*</em></label>
+                        <input class="form-text form-control" id="inputTitle" name="title" placeholder="请输入活动标题，不少于5个字" type="text" value="读书村春季篮球争霸赛">
+                    </div>
+                    <div class="form-group">
+                    	<label for="inputType" class="title">活动类型<em>*</em></label>                        
+                        <div class="btn-group type-choose"  data-toggle="buttons">
+                              <label for="hwxx" class="btn active">
+                                <input type="checkbox" name="options" id="hwxx" autocomplete="on" checked>户外休闲
+                              </label>
+                              <label for="tb" class="btn">
+                                <input type="checkbox" name="options" id="tb" autocomplete="on">徒步
+                              </label>
+                              <label for="sy" class="btn">
+                                <input type="checkbox" name="options" id="sy" autocomplete="on">摄影
+                              </label>
+                              <label for="zj" class="btn">
+                                <input type="checkbox" name="options" id="zj" autocomplete="on">自驾
+                              </label>
+                              <label for="other" class="btn">
+                                <input type="checkbox" name="options" id="other" autocomplete="on">其他
+                              </label>
+                            </div>
+                    </div>
+                   <div class="form-group form-group-date">
+                      <div class="form-group-item">
+	                    <label for="inputStart" class="title">开始时间<em>*</em></label>                    
+                        <input id="inputStart" name="start" type="text" value="2015-03-16" class="form-control input-date" onclick="laydate()">
+                        <select id="startTime" class="form-control select-time">
+                                <option value="00:00" selected>00:00</option>
+                                <option value="00:30">00:30</option>
+                                <option value="01:00">01:00</option>
+                                <option value="01:30">01:30</option>
+                                <option value="02:00">02:00</option>
+                                <option value="02:30">02:30</option>
+                        </select>
+                      </div>
+                      <div class="form-group-item">
+                      <label for="inputEnd" class="title">结束时间<em>*</em></label> 
+                        <input id="inputEnd" name="end" type="text" value="2015-03-16" class="form-control input-date" onclick="laydate()">
+                        <select id="endTime" class="form-control select-time">
+                                <option value="00:00">00:00</option>
+                                <option value="00:30">00:30</option>
+                                <option value="01:00">01:00</option>
+                                <option value="01:30">01:30</option>
+                                <option value="02:00" selected>02:00</option>
+                                <option value="02:30">02:30</option>
+                                <option value="03:00">03:00</option>
+                                <option value="03:30">03:30</option>
+                        </select>
+           			 </div>
+                    </div>
+                    <div class="form-group">
+                    	<label for="inputDate" class="title">报名截止时间<em>*</em></label>
+                        <input class="form-text form-control" id="inputDate" name="date" type="text" value="2015-03-14" onclick="laydate()">
+                    </div>
+                     <div class="form-group">
+	                    <label class="title">集合地点<em>*</em></label>
+  					    <select id="loc_province" name="province" class="form-control select-address"></select>
+                        <select id="loc_city" name="city" class="form-control select-address"></select>
+                        <select id="loc_town" name="town" class="form-control select-address"></select>
+                        <input  id="inputAddress" name="address" placeholder="例如：读书村6队12租#1820" type="text" value="" class="form-control input-place">
+           			 </div>
+                    <div class="form-group">
+                    	<label for="inputNum" class="title">人数<em>*</em></label>
+                        <input class="form-control form-text" id="inputNum" name="num" placeholder="10" type="text" value="">
+                    </div>
+                     <div class="form-group">
+                     	<label class="title">详细内容<em>*</em></label>
+                        <div class="con clearfix">
+                            <script id="container" name="content" type="text/plain"></script>   
+                            <div class="cl"></div>                         
+                         </div>
+                    </div>
+                    </form>
+                </div>
+                <hr/>
+                <div class="activity-body">
+                  <div class="t-head">报名设置</div>                	 
+                        <form action="#" method="get" target="_self" class="form-inline form-template">
+                            <fieldset> 
+                            <h4 class="sub-title">联系方式<em>(报名用户注册资料,必填项。)</em></h4>
+                            <div class="form-group">
+                                <label><input type="checkbox" checked="checked" disabled>&nbsp;必填</label>
+                                <span>姓名</span>
+                                <input type="text" class="form-control" placeholder="报名用户的姓名或昵称" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label><input type="checkbox" checked="checked" disabled>&nbsp;必填</label>
+                                <span>手机号码</span>
+                                <input type="text" class="form-control" placeholder="报名用户的手机号码" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label><input type="checkbox" checked="checked" disabled>&nbsp;必填</label>
+                                <span>电子邮箱</span>
+                                <input type="text" class="form-control" placeholder="报名用户的电子邮箱" disabled>
+                            </div>                        
+                             </fieldset>
+                        </form>
+                </div>
+                <hr/>
+                <div class="activity-body">   
+                    <div class="form-group">
+                    	<label class="title">选择支付方式</label>         		
+                            <div class="btn-group type-choose"  data-toggle="buttons">
+                              <label for="online" class="btn active">
+                                <input type="radio" name="options" id="online" autocomplete="on" checked>线上支付
+                              </label>
+                              <label for="offline" class="btn">
+                                <input type="radio" name="options" id="offline" autocomplete="on">线下支付
+                              </label>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                    	<label class="title">报名费用</label>
+                        <input class="form-control" id="inputMoney"  name="money" placeholder="100" type="text" value="">
+                    </div>
+               </div>
+                <hr/>
+                <div class="form-btn-group">
+                    <button class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-ok-sign"></i>保存</button>
+                    <button class="btn btn-lg btn-default">预览</button>
+                   </div>
+
+                </section>    
+        </div>
+
+   </div>
+</div>
+
+
+
+
+
+<footer>
+<div class="container">
+	<p class="pull-left copyright">
+    <span>周末见</span><br/>
+    Copyright © 2014 周末见. All Rights Reserved.&nbsp;&nbsp;陕ICP备13001214号
+    </p>
+    <p class="pull-right company">
+    <a href="#">意见反馈</a>
+    <a href="#">帮助中心</a>
+    <a href="#">联系我们</a>    
+   </p>
+   </div>
+</footer>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/location.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	showLocation();
+});
+</script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+ <!-- 实例化编辑器 -->
+<script type="text/javascript">
+  var editor = UE.getEditor('container');
+</script>
+</body>
+</html>
