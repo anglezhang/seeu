@@ -17,12 +17,12 @@ public class UserValidate extends Validator{
 		if(!password.equals(rePassword)){
 			addError("errorMsg", "两次输入密码不一致");
 		}
-		String code = controller.getAttr("verifCode");
+		String code = controller.getSessionAttr("verifCode");
 		if(!verifCode.equalsIgnoreCase(code)){
 			addError("errorMsg", "验证码输入不正确");
 		}
 		//用户名唯一性验证
-		User user = User.user.findById("loginaccount", controller.getPara("userName"));
+		User user = User.user.findById(controller.getPara("userName"), "loginaccount");
 		if(user != null){
 			addError("errorMsg", "该手机号已被注册");
 		}

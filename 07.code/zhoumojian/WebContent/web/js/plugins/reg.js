@@ -70,6 +70,10 @@ define(function(require, exports, module)
 					function(data)
 					{
 						t.debug("regestBtn data=" + t.jsonToStr(data));
+						if(data.status == 1)
+						{
+							window.location.href = "login.jsp";
+						}
 					});
 			}
 		});

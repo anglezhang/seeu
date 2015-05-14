@@ -54,14 +54,16 @@ public class SeeuBaseController extends Controller{
 		user.save();
 		site.save();
 		//返回
+		//renderJsp("login.jsp");
 		renderJson("{\"status\":1}");
 	}
 	
 	public void verifCode(){
 		String verifCode = RandomUtil.generateNumber(6);
 		String phone = getPara("phone");
+		setSessionAttr("verifCode", verifCode);
 		//发送手机短信
-		renderJson("{\"status\":1,\"verifCode\":" + phone + "}");
+		renderJson("{\"status\":1,\"verifCode\":" + verifCode + "}");
 	}
 	
 	
